@@ -1,40 +1,49 @@
 // ********************  Menu start **********************
 
 class MenuManager {
-    constructor(hamburgerId, menuId, navbarSelector) {
+    constructor(hamburgerId, menu__listId, headerSelector) {
         this.hamburger = document.getElementById(hamburgerId);
-        this.menu = document.getElementById(menuId);
-        this.navbar = document.querySelector(navbarSelector);
+        this.menu__list = document.getElementById(menu__listId);
+        this.header = document.querySelector(headerSelector);
         this.isOpen = false;
 
         this.hamburger.addEventListener('click', this.toggle.bind(this));
+
+        const mediaQuery = window.matchMedia('(min-width: 577px)');
+
+        mediaQuery.addEventListener('change', () => {
+            if (mediaQuery.matches) {
+                this.menu__list.style.transform = '';
+                this.menu__list.style.opacity = '';
+                this.menu__list.classList.remove('active');
+                this.header.classList.remove('active');
+                this.isOpen = false;
+            }
+        });
     }
 
     toggle = () => {
-
         if (this.isOpen) {
             // Zárás animáció
-            this.menu.style.transform = "translateX(100%)";
+            this.menu__list.style.transform = "translateX(100%)";
 
             setTimeout(() => {
-                this.menu.style.opacity = 0;
+                this.menu__list.style.opacity = 0;
             }, 300);
 
         } else {
             // Nyitás animáció
-            this.menu.style.opacity = 1;
-            this.menu.style.transform = "translateX(0)";
+            this.menu__list.style.opacity = 1;
+            this.menu__list.style.transform = "translateX(0)";
         }
 
-        this.menu.classList.toggle('active');
-        this.navbar.classList.toggle('active');
+        this.menu__list.classList.toggle('active');
+        this.header.classList.toggle('active');
         this.isOpen = !this.isOpen;
     };
 }
 
-// TODO ezt át kell írni szebben úgy, hogy css-bol jöjjenek az adatok 
-
-const menuManager = new MenuManager('hamburger', 'menu', '.navbar');
+const menuManager = new MenuManager('hamburger', 'menu__list', '.header');
 
 // ********************  Menu end **********************
 
