@@ -84,13 +84,40 @@ ul {
     align-items: center;
 }
 
-.intro-content__text-box {
+.header,
+.intro-content {
+    padding: 2.5em 5em;
+}
+
+.intro-content,
+.about-header,
+.about-body {
+    display: grid;
+}
+
+.intro-content,
+.about-header {
+    background-size: cover;
+}
+
+.intro-content__text-box,
+.about-header {
     color: #fff;
 }
 
-.header,
-.intro-content {
-    padding: 0 5em;
+.header-content__logo-box__link,
+.about-header__div__cBox__h2 {
+    font-weight: 900;
+}
+
+.intro-content__img-box__img {
+    display: block;
+    margin: auto;
+}
+
+.page-link {
+    background: #fff;
+    padding: 0.7em 2em;
 }
 
 
@@ -116,18 +143,27 @@ ul {
 }
 
 .menu__item {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.1rem;
     padding-left: 2.3em;
 }
 
+.menu__item,
+.page-link {
+    font-weight: 600;
+}
+
 .header-content__logo-box__link,
-.menu__item {
+.menu__item,
+.page-link {
     color: #150035;
 }
 
-.header-content__logo-box__link {
+.header-content__logo-box__link,
+.about-header__div__cBox__h2 {
     font-weight: 900;
+}
+
+.header-content__logo-box__link {
     font-size: 3rem;
 }
 
@@ -158,14 +194,77 @@ ul {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.intro-content__text-box__h1 {
+    width: 50%;
+    font-size: 1.6rem;
+}
+
 .intro-content__img-box__img {
     width: 70%;
-    display: block;
-    margin: auto;
+}
+
+.intro-content__arrow-img {
+    left: 3%;
+    bottom: 0;
+    width: 20%;
+}
+
+.intro-content__text-box__link-box {
+    padding-bottom: 10em;
+}
+
+.intro-content__text-box__p {
+    margin: 1em 0 2.3em 0;
+    width: 75%;
+}
+
+.intro-content {
+    padding-top: 5em;
+    margin-top: -1.5em;
 }
 
 
 /********************  intro formating end **********************/
+
+
+/********************  about formating start **********************/
+
+.about-content__img {
+    top: 0;
+    width: 100%;
+    height: 330px;
+}
+
+.about-header {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding-top: 2.5em;
+}
+
+.about-header__cBox__img {
+    width: 33%;
+}
+
+.about-header__cBox__h2 {
+    margin: 0.5em 0 0 0;
+    font-size: 1.6rem;
+}
+
+.about-header__cBox__p {
+    margin: 0.3em 0 0 0;
+}
+
+.about-body {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2em 5em;
+}
+
+.about-body__iBox__img {
+    width: 80%;
+}
+
+
+/********************   about formating end **********************/
 
 
 /********************  Media formating start **********************/
@@ -215,7 +314,8 @@ ul {
     .header.active .bar:last-child {
         transform: translateY(-8px) rotate(-45deg);
     }
-    .intro-content {
+    .intro-content,
+    .about-header {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
 }
