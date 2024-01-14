@@ -82,14 +82,15 @@
         <div class="footer-content">
 
             <div class="footer-content__iBox">
-                <img class="footer-content__iBox__img" src="/img/footer/footer-body.webp" alt="jumpex">
+                <img class="footer-content__iBox__img position-relative" src="/img/footer/footer-body.webp"
+                    alt="jumpex">
             </div>
 
             <div class="footer-content__tBox">
 
                 <h6 class="footer-content__tBox__h6">Kérjen árajánlatot</h6>
 
-                <form class="footer-content__tBox__form d-flex" action="#" method="post">
+                <form class="footer-content__tBox__form d-flex position-relative" action="#" method="post">
                     <label class="footer-content__tBox__form__label" for="company">Cég név:</label>
                     <input class="footer-content__tBox__form__input" type="text" id="company" name="company" required>
 
@@ -104,11 +105,63 @@
 
                     <div class="footer-content__tBox__form__btn-box">
                         <button class="footer-content__tBox__form__btn-box__btn page-link" type="submit">
-                            <span class="thm-btn">Küldés most</span>
+                            <span class="footer-content__tBox__form__btn-box__btn__span">Elküldés<img
+                                    class="footer-content__tBox__form__btn-box__btn__span__img position-relative"
+                                    src="/img/footer/mail-btn.svg" alt="jumpex">
+                            </span>
                         </button>
                     </div>
                 </form>
             </div>
+
+        </div>
+
+        <div class="copyright-content position-relative">
+
+            <img class="copyright-content__bg-img position-absolute" src="/img/footer/footer-bottom.webp" alt="jumpex">
+
+            <div class="copyright-content__link-box position-absolute t-end">
+
+                <p class="copyright-content__link-box__p">
+                    <a class="copyright-content__link-box__p__link" href="#">
+                        <img class="copyright-content__link-box__p__link__img position-relative"
+                            src="/img/footer/map.svg" alt="jumpex">
+                        1234, Példa utca 13.
+                    </a>
+                </p>
+
+                <p class="copyright-content__link-box__p">
+                    <a class="copyright-content__link-box__p__link" href="tel:+36303156192">
+                        <img class="copyright-content__link-box__p__link__img position-relative"
+                            src="/img/footer/mobile.svg" alt="jumpex">
+                        +36 30 315 6192
+                    </a>
+                </p>
+
+                <p class="copyright-content__link-box__p">
+                    <a class="copyright-content__link-box__p__link" href="mailto:info@jumpex.hu">
+                        <img class="copyright-content__link-box__p__link__img position-relative"
+                            src="/img/footer/mail.svg" alt="jumpex">
+                        info@jumpex.hu
+                    </a>
+                </p>
+
+                <div class="copyright-logo-box">
+                    <a class="copyright-logo-box__link text-transform-uppercase" href="/">jumpex kft</a>
+                </div>
+
+                <div class="copyright-menu-link-box d-flex">
+                    <a class="copyright-menu-link-box__link" href="#">Rólunk</a>
+                    <a class="copyright-menu-link-box__link" href="#">Referenciák</a>
+                    <a class="copyright-menu-link-box__link" href="#">Partnereink</a>
+                    <a class="copyright-menu-link-box__link" href="#">Ajánlatkérés</a>
+                    <a class="copyright-menu-link-box__link copyright-menu-link-box__link--margin-0"
+                        href="#">Kapcsolat</a>
+                </div>
+
+            </div>
+
+
 
         </div>
 
