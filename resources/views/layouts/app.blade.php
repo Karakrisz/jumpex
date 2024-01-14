@@ -37,6 +37,10 @@
     <meta name="DC.format" content="text/html" />
     <meta name="DC.publisher" content="Jumpex Kft" />
     <meta name="DC.title" content="" />
+
+    <!-- Slide css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     <!-- App css -->
     <link rel="stylesheet" href="/css/app.css">
 
@@ -74,6 +78,8 @@
     </main>
 
     <footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
         <script src="/js/app.js"></script>
     </footer>
 </body>

@@ -105,7 +105,7 @@ products.forEach(element => {
 
 // ********************  Bottom Animation end **********************
 
-// ********************  Slider start **********************
+// ********************  Matrix start **********************
 
 
 class MatrixTextAnimation {
@@ -127,4 +127,16 @@ class MatrixTextAnimation {
 const matrixTextAnimation = new MatrixTextAnimation(".matrix-text__span");
 matrixTextAnimation.animateLetters();
 
-// ********************  Slider end **********************
+// ********************  Matrix end **********************
+
+/********************  Slide start **********************/
+
+const splide = new Splide('.splide', {
+    type: 'loop',
+    autoplay: 'true',
+    interval: '5000',
+});
+
+splide.mount();
+
+/********************  Slide end **********************/

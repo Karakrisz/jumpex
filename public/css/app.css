@@ -117,7 +117,17 @@ ul {
 
 .page-link {
     background: #fff;
+}
+
+.page-link,
+.two-page-link {
     padding: 0.7em 2em;
+    font-weight: 600;
+}
+
+.two-page-link {
+    background: #150035;
+    color: #fff;
 }
 
 
@@ -242,7 +252,7 @@ ul {
 }
 
 .about-header__cBox__img {
-    width: 33%;
+    width: 25%;
 }
 
 .about-header__cBox__h2 {
@@ -261,10 +271,30 @@ ul {
 
 .about-body__iBox__img {
     width: 80%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.about-body__tBox__h3 {
+    margin-top: 3em;
+}
+
+.about-body__tBox__link-box {
+    margin: 3em 0 1em 0;
+}
+
+.about-body__tBox__p {
+    width: 80%;
 }
 
 
 /********************   about formating end **********************/
+
+
+/********************   references formating start **********************/
+
+
+/********************   references formating end **********************/
 
 
 /********************  Media formating start **********************/
@@ -315,7 +345,8 @@ ul {
         transform: translateY(-8px) rotate(-45deg);
     }
     .intro-content,
-    .about-header {
+    .about-header,
+    .about-body {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
 }

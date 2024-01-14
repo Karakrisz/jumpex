@@ -67,7 +67,7 @@
                     ut leo accumsan pulvinar. Nunc vitae scelerisque nibh, eget finibus neque. Vestibulum lacinia magna
                     a lorem vehicula consequat.</p>
                 <div class="about-body__tBox__link-box">
-                    <a class="about-body__tBox__link-box__link page-link" href="#">Tovább</a>
+                    <a class="about-body__tBox__link-box__link two-page-link" href="#">Tovább</a>
                 </div>
             </div>
 
@@ -79,5 +79,23 @@
 
     </div>
 </section>
+
+<section class="splide">
+    <div class="splide__track">
+        <ul class="splide__list">
+            <li class="splide__slide">
+                <img class="splide__slide__img" src="/img/references/references.webp" alt="jumpex">
+            </li>
+            <li class="splide__slide">
+                <img class="splide__slide__img" src="/img/references/references.webp" alt="jumpex">
+            </li>
+            <li class="splide__slide">
+                <img class="splide__slide__img" src="/img/references/references.webp" alt="jumpex">
+            </li>
+        </ul>
+    </div>
+</section>
+
+
 
 @endsection
