@@ -78,6 +78,40 @@
     </main>
 
     <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-content__iBox">
+                <img class="footer-content__iBox__img" src="/img/footer/footer-body.webp" alt="jumpex">
+            </div>
+
+            <div class="footer-content__tBox">
+
+                <h6 class="footer-content__tBox__h6">Kérjen árajánlatot</h6>
+
+                <form class="footer-content__tBox__form d-flex" action="#" method="post">
+                    <label class="footer-content__tBox__form__label" for="company">Cég név:</label>
+                    <input class="footer-content__tBox__form__input" type="text" id="company" name="company" required>
+
+                    <label class="footer-content__tBox__form__label" for="name">Név:</label>
+                    <input class="footer-content__tBox__form__input" type="text" id="name" name="name" required>
+
+                    <label class="footer-content__tBox__form__label" for="email">E-mail:</label>
+                    <input class="footer-content__tBox__form__input" type="email" id="email" name="email" required>
+
+                    <label class="footer-content__tBox__form__label" for="phone">Telefonszám:</label>
+                    <input class="footer-content__tBox__form__input" type="tel" id="phone" name="phone" required>
+
+                    <div class="footer-content__tBox__form__btn-box">
+                        <button class="footer-content__tBox__form__btn-box__btn page-link" type="submit">
+                            <span class="thm-btn">Küldés most</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
         <script src="/js/app.js"></script>

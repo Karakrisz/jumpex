@@ -111,5 +111,9 @@
 </section>
 
 
+<section>
+    partnerek
+</section>
+
 
 @endsection
