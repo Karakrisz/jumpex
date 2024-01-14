@@ -400,6 +400,7 @@ ul {
 
 .footer-content__tBox__form__btn-box {
     margin-top: 2em;
+    z-index: 150;
 }
 
 .footer-content__tBox__form__btn-box__btn {

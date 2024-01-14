@@ -90,7 +90,7 @@
 
                 <h6 class="footer-content__tBox__h6">Kérjen árajánlatot</h6>
 
-                <form class="footer-content__tBox__form d-flex position-relative" action="#" method="post">
+                <form class="footer-content__tBox__form d-flex" action="#" method="post">
                     <label class="footer-content__tBox__form__label" for="company">Cég név:</label>
                     <input class="footer-content__tBox__form__input" type="text" id="company" name="company" required>
 
@@ -103,7 +103,7 @@
                     <label class="footer-content__tBox__form__label" for="phone">Telefonszám:</label>
                     <input class="footer-content__tBox__form__input" type="tel" id="phone" name="phone" required>
 
-                    <div class="footer-content__tBox__form__btn-box">
+                    <div class="footer-content__tBox__form__btn-box position-relative">
                         <button class="footer-content__tBox__form__btn-box__btn page-link" type="submit">
                             <span class="footer-content__tBox__form__btn-box__btn__span">Elküldés<img
                                     class="footer-content__tBox__form__btn-box__btn__span__img position-relative"
