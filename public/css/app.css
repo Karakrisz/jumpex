@@ -122,6 +122,11 @@ ul {
 .page-link,
 .two-page-link {
     padding: 0.7em 2em;
+}
+
+.page-link,
+.two-page-link,
+.splide__up-box__tBox__h4 {
     font-weight: 600;
 }
 
@@ -224,8 +229,8 @@ ul {
 }
 
 .intro-content__text-box__p {
-    margin: 1em 0 2.3em 0;
-    width: 75%;
+    margin: 1em 0 2.9em 0;
+    width: 90%;
 }
 
 .intro-content {
@@ -241,8 +246,13 @@ ul {
 
 .about-content__img {
     top: 0;
-    width: 100%;
     height: 330px;
+}
+
+.about-content__img,
+.splide__slide__img,
+.splide__up-box {
+    width: 100%;
 }
 
 .about-header {
@@ -272,6 +282,10 @@ ul {
 .about-body__iBox__img {
     width: 80%;
     height: 380px;
+}
+
+.about-body__iBox__img,
+.splide__slide__img {
     object-fit: cover;
 }
 
@@ -280,7 +294,7 @@ ul {
 }
 
 .about-body__tBox__link-box {
-    margin: 3em 0 1em 0;
+    margin: 3em 0 5em 0;
 }
 
 .about-body__tBox__p {
@@ -292,6 +306,38 @@ ul {
 
 
 /********************   references formating start **********************/
+
+.splide__pagination__page {
+    background: #fff;
+    opacity: 1;
+}
+
+.splide__pagination__page.is-active,
+.splide__up-box__tBox {
+    background: #1088ff;
+}
+
+.splide__slide__img {
+    height: 650px;
+}
+
+.splide__up-box {
+    top: 0;
+    background-color: rgb(4 4 101 / 72%);
+    z-index: 100;
+}
+
+.splide__up-box__tBox {
+    width: 16%;
+    float: right;
+    padding: 1.5em 0;
+}
+
+.splide__up-box__tBox__h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
 
 
 /********************   references formating end **********************/

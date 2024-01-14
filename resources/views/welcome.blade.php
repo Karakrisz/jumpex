@@ -80,9 +80,23 @@
     </div>
 </section>
 
-<section class="splide">
+<section class="splide position-relative">
+    <div class="splide__up-box position-absolute">
+        <div class="splide__up-box__tBox text-center">
+            <h4 class="splide__up-box__tBox__h4">Referenciák</h4>
+        </div>
+    </div>
     <div class="splide__track">
         <ul class="splide__list">
+            <li class="splide__slide">
+                <img class="splide__slide__img" src="/img/references/references.webp" alt="jumpex">
+            </li>
+            <li class="splide__slide">
+                <img class="splide__slide__img" src="/img/references/references.webp" alt="jumpex">
+            </li>
+            <li class="splide__slide">
+                <img class="splide__slide__img" src="/img/references/references.webp" alt="jumpex">
+            </li>
             <li class="splide__slide">
                 <img class="splide__slide__img" src="/img/references/references.webp" alt="jumpex">
             </li>
