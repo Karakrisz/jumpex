@@ -6,6 +6,30 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+
+/* ===================================
+    Scrollbar
+====================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    width: 13px;
+    background: white;
+    border-left: 0 solid white;
+    border-right: 0 solid white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(100deg, #130233, #130233, #130233);
+    background-size: 180% 180%;
+    width: 0;
+    height: 25%;
+    transition: .5s ease;
+}
+
 *,
 :after,
 :before {
