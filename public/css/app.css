@@ -117,6 +117,7 @@ ul {
 .about-header,
 .intro-content,
 .about-body,
+.partners-content__iBox,
 .footer-content {
     display: grid;
 }
@@ -275,6 +276,13 @@ ul {
 
 /********************  about formating start **********************/
 
+.about-body__tBox__h3,
+.splide__up-box__tBox__h4,
+.partners-content__h5,
+.footer-content__tBox__h6 {
+    font-weight: 600;
+}
+
 .about-content__img {
     top: 0;
     height: 330px;
@@ -313,6 +321,7 @@ ul {
 }
 
 .about-body,
+.partners-content,
 .footer-content {
     padding: 2em 5em;
 }
@@ -382,6 +391,21 @@ ul {
 
 
 /********************   partners formating start **********************/
+
+.partners-content {
+    padding-bottom: 5em;
+}
+
+.partners-content__iBox {
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+}
+
+.partners-content__iBox__img {
+    width: 80%;
+    height: 5em;
+    object-fit: contain;
+}
 
 
 /********************   partners formating end **********************/
@@ -525,6 +549,7 @@ ul {
     }
     .about-body__tBox__h3,
     .splide__up-box__tBox__h4,
+    .partners-content__h5,
     .footer-content__tBox__h6 {
         font-size: 2.5rem;
     }
@@ -597,6 +622,7 @@ ul {
     }
     .about-body__tBox__h3,
     .splide__up-box__tBox__h4,
+    .partners-content__h5,
     .footer-content__tBox__h6 {
         font-size: 2.3rem;
     }
@@ -669,6 +695,7 @@ ul {
     }
     .about-body__tBox__h3,
     .splide__up-box__tBox__h4,
+    .partners-content__h5,
     .footer-content__tBox__h6 {
         font-size: 2rem;
     }
@@ -742,6 +769,7 @@ ul {
     }
     .about-body__tBox__h3,
     .splide__up-box__tBox__h4,
+    .partners-content__h5,
     .footer-content__tBox__h6 {
         font-size: 1.7rem;
     }
@@ -817,6 +845,7 @@ ul {
     }
     .about-body__tBox__h3,
     .splide__up-box__tBox__h4,
+    .partners-content__h5,
     .footer-content__tBox__h6 {
         font-size: 1.5rem;
     }
@@ -866,7 +895,7 @@ ul {
 
 @media (min-width: 1400px) and (max-width: 1500px) {
     p {
-        font-size: 1em;
+        font-size: 1rem;
     }
     .page-link,
     .two-page-link {
@@ -876,7 +905,7 @@ ul {
         font-size: 2.5rem;
     }
     .menu__item {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .intro-content__text-box__h1 {
         font-size: 2rem;
@@ -890,8 +919,9 @@ ul {
     }
     .about-body__tBox__h3,
     .splide__up-box__tBox__h4,
+    .partners-content__h5,
     .footer-content__tBox__h6 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .about-content__img {
         height: 24em;
@@ -910,7 +940,7 @@ ul {
     }
     .footer-content__tBox__form__label {
         margin-top: 0.5em;
-        font-size: .9rem;
+        font-size: 1rem;
     }
     .footer-content__tBox__form__btn-box__btn {
         padding-top: 1em;
@@ -962,6 +992,7 @@ ul {
     }
     .about-body__tBox__h3,
     .splide__up-box__tBox__h4,
+    .partners-content__h5,
     .footer-content__tBox__h6 {
         font-size: 1.2rem;
     }
@@ -1048,6 +1079,7 @@ ul {
     }
     .about-body__tBox__h3,
     .splide__up-box__tBox__h4,
+    .partners-content__h5,
     .footer-content__tBox__h6 {
         font-size: 1.2rem;
     }
@@ -1184,6 +1216,12 @@ ul {
     .intro-content__arrow-img {
         width: 25%;
     }
+    .about-body__tBox__h3,
+    .splide__up-box__tBox__h4,
+    .partners-content__h5,
+    .footer-content__tBox__h6 {
+        font-size: 1.4rem;
+    }
     .about-header__cBox__h2 {
         font-size: 1.2rem;
     }
@@ -1208,6 +1246,13 @@ ul {
     }
     .splide__slide__img {
         height: 100%;
+    }
+    .partners-content__iBox {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+    .partners-content__iBox__img {
+        width: 70%;
+        height: 60%;
     }
     .footer-content__iBox__img {
         width: 67%;
@@ -1288,6 +1333,7 @@ ul {
     .intro-content,
     .about-header,
     .about-body,
+    .partners-content__iBox,
     .footer-content {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
@@ -1333,6 +1379,7 @@ ul {
         width: 100%;
     }
     .about-body__tBox__h3,
+    .partners-content__h5,
     .footer-content__tBox__h6 {
         font-size: 1.8rem;
     }
@@ -1343,6 +1390,10 @@ ul {
         font-size: 1rem;
     }
     .splide__slide__img {
+        height: 100%;
+    }
+    .partners-content__iBox__img {
+        width: 100%;
         height: 100%;
     }
     .footer-content__iBox__img {
