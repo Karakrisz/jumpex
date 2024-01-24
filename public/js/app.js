@@ -75,32 +75,41 @@ class ScrollBottomAnimation {
 }
 
 
-const promotionsImg = document.querySelectorAll('.promotions-content__img-text-box__div');
-const pageLinkBox = document.querySelectorAll('.promotions-content__link-box');
-const aboutImg = document.querySelectorAll('.about-content__img-text-box__img-box__one-img-box');
-const gallerySlies = document.querySelectorAll('.gallery-content__sildes');
-const products = document.querySelectorAll('.products-content__flex-box__div');
+const introContentArrowImg = document.querySelectorAll('.intro-content__arrow-img');
+const introContentImgboxImg = document.querySelectorAll('.intro-content__img-box__img');
+const aboutBodyiBoxImg = document.querySelectorAll('.about-body__iBox__img');
+const partnersContentiBoximg = document.querySelectorAll('.partners-content__iBox__img');
+const partnersContentLinkbox = document.querySelectorAll('.partners-content__link-box');
+const footerContentiBoximg = document.querySelectorAll('.footer-content__iBox__img');
+const footerContenttBoxFormBtnBox = document.querySelectorAll('.footer-content__tBox__form__btn-box');
 
-promotionsImg.forEach(element => {
+introContentArrowImg.forEach(element => {
     new ScrollBottomAnimation(element);
 });
 
-pageLinkBox.forEach(element => {
+introContentImgboxImg.forEach(element => {
     new ScrollBottomAnimation(element);
 });
 
-aboutImg.forEach(element => {
+aboutBodyiBoxImg.forEach(element => {
     new ScrollBottomAnimation(element);
 });
 
-gallerySlies.forEach(element => {
+partnersContentiBoximg.forEach(element => {
     new ScrollBottomAnimation(element);
 });
 
-products.forEach(element => {
+partnersContentLinkbox.forEach(element => {
     new ScrollBottomAnimation(element);
 });
 
+footerContentiBoximg.forEach(element => {
+    new ScrollBottomAnimation(element);
+});
+
+footerContenttBoxFormBtnBox.forEach(element => {
+    new ScrollBottomAnimation(element);
+});
 
 
 // ********************  Bottom Animation end **********************

@@ -62,11 +62,21 @@
                 </div>
                 <nav class="menu">
                     <ul class="menu__list d-flex" id="menu__list">
-                        <li class="menu__item">Rólunk</li>
-                        <li class="menu__item">Referenciák</li>
-                        <li class="menu__item">Partnereink</li>
-                        <li class="menu__item">Ajánlatkérés</li>
-                        <li class="menu__item">Kapcsolat</li>
+                        <li class="menu__list__li">
+                            <a class="menu__item" href="#">Rólunk</a>
+                        </li>
+                        <li class="menu__list__li">
+                            <a class="menu__item" href="#">Referenciák</a>
+                        </li>
+                        <li class="menu__list__li">
+                            <a class="menu__item" href="#">Partnereink</a>
+                        </li>
+                        <li class="menu__list__li">
+                            <a class="menu__item" href="#">Ajánlatkérés</a>
+                        </li>
+                        <li class="menu__list__li">
+                            <a class="menu__item" href="#">Kapcsolat</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
