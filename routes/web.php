@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/{lang?}', function ($lang = 'hu') {
+    return view('welcome');
+})->where('lang', 'en|hu|de');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
