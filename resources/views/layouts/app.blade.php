@@ -63,7 +63,8 @@
                 <nav class="menu">
                     <ul class="menu__list d-flex" id="menu__list">
                         <li class="menu__list__li">
-                            <a class="menu__item" href="#">Rólunk</a>
+                            <a class="menu__item"
+                                href="{{ route('rolunk', ['lang' => app()->getLocale()]) }}">{{ trans('messages.rolunk') }}</a>
                         </li>
                         <li class="menu__list__li">
                             <a class="menu__item" href="#">Referenciák</a>

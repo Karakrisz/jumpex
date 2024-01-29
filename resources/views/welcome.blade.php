@@ -60,7 +60,7 @@
         <div class="about-body position-relative">
 
             <div class="about-body__tBox">
-                <h3 class="about-body__tBox__h3">Rólunk</h3>
+                <h3 class="about-body__tBox__h3">{{ __('messages.about_h3') }}</h3>
                 <p class="about-body__tBox__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat massa,
                     fringilla id gravida non, gravida in eros. Praesent hendrerit risus id justo lobortis, sed iaculis
                     orci congue. Cras facilisis sapien tempor tortor euismod, nec mattis nulla euismod. Vivamus non nunc
