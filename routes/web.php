@@ -27,7 +27,6 @@ Route::get('/', function () {
 //     return view('welcome');
 // })->where('lang', 'en|hu|de');
 
-Route::get('/{lang?}', [LanguagesController::class, 'home'])->where('lang', 'en|hu|de');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -35,16 +34,12 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/header', 'HeaderFooterController@getHeaderContent');
 
-// Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index']);
-Route::get('/', [PostController::class, 'index']);
-Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
-
-Route::get('/json-posts', [PostController::class, 'jsonPosts']);
-
-Route::get('/categories', [CategoryController::class, 'index']);
-
+Route::get('/{lang?}', [LanguagesController::class, 'home'])->where('lang', 'en|hu|de');
 Route::get('/{lang?}/rolunk', [LanguagesController::class, 'about'])->where('lang', 'en|hu|de')->name('rolunk');
 
-Route::view('/blog', 'blog');
+Route::get('/', [PostController::class, 'index']);
+Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
+Route::get('/json-posts', [PostController::class, 'jsonPosts']);
+Route::get('/categories', [CategoryController::class, 'index']);
 
 Route::get('/footer', 'HeaderFooterController@getFooterContent');

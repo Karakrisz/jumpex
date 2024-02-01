@@ -45,6 +45,33 @@ class MenuManager {
 
 const menuManager = new MenuManager('hamburger', 'menu__list', '.header');
 
+// ********************  Language selector start **********************
+
+class FlagContainer {
+    constructor() {
+        this.flagContainer = document.querySelector('.flag-container');
+        this.subFlags = document.querySelector('.sub-flags');
+        this.flagArrow = document.querySelector('.flag-arrow');
+
+        this.flagArrow.addEventListener('click', () => this.toggleSubFlags());
+        document.addEventListener('click', (e) => this.hideSubFlags(e));
+    }
+
+    toggleSubFlags() {
+        this.subFlags.style.display = (this.subFlags.style.display === 'block') ? 'none' : 'block';
+    }
+
+    hideSubFlags(e) {
+        if (e.target !== this.flagArrow && e.target.parentNode !== this.flagArrow) {
+            this.subFlags.style.display = 'none';
+        }
+    }
+}
+
+const flagContainer = new FlagContainer();
+
+// ********************  Language selector end **********************
+
 // ********************  Menu end **********************
 
 // ********************  Bottom Animation start **********************

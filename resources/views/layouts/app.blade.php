@@ -78,6 +78,18 @@
                         <li class="menu__list__li">
                             <a class="menu__item" href="#">Kapcsolat</a>
                         </li>
+                        <li class="menu__list__li">
+                            <a class="menu__item" href="#">
+                                <span class="flag-arrow">➤</span>
+                            </a>
+                            <div class="flag-container position-relative">
+                                <div class="sub-flags position-absolute" class="sub-flags">
+                                    <img src="flag1.jpg" alt="jumpex">
+                                    <img src="flag2.jpg" alt="jumpex">
+                                    <img src="flag2.jpg" alt="jumpex">
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </div>
