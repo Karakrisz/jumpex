@@ -52,7 +52,8 @@
     <header class="header">
         <div class="header-content d-flex">
             <div class="logo-box  header-content__logo-box">
-                <a href="/" class="header-content__logo-box__link text-transform-uppercase">Jumpex kft</a>
+                <a href="{{ url()->current() }}" class="header-content__logo-box__link text-transform-uppercase">Jumpex
+                    kft</a>
             </div>
             <div class="nav-box header-content__nav-box">
                 <div class="hamburger position-relative" id="hamburger">
@@ -79,21 +80,38 @@
                             <a class="menu__item" href="#">Kapcsolat</a>
                         </li>
                         <li class="menu__list__li">
-                            <a class="menu__item" href="#">
-                                <span class="flag-arrow">➤</span>
+                            <a class="menu__item">
+                                <span class="flag-arrow">
+                                    <img class="flag-arrow__img" src="/img/header/lang/hu.webp" alt="jumpex">
+                                </span>
                             </a>
+
                             <div class="flag-container position-relative">
-                                <div class="sub-flags position-absolute" class="sub-flags">
-                                    <img src="flag1.jpg" alt="jumpex">
-                                    <img src="flag2.jpg" alt="jumpex">
-                                    <img src="flag2.jpg" alt="jumpex">
+                                <div class="sub-flags position-absolute">
+                                    <div class="sub-flags__flex-box d-flex">
+                                        <a class="sub-flags__flex-box__link position-relative" href="/hu">
+                                            <img class="sub-flags__flex-box__link__img" src="/img/header/lang/hu.webp"
+                                                alt="jumpex">
+                                        </a>
+                                        <a class="sub-flags__flex-box__link position-relative" href="/en">
+                                            <img class="sub-flags__flex-box__link__img" src="/img/header/lang/en.webp"
+                                                alt="jumpex">
+                                        </a>
+                                        <a class="sub-flags__flex-box__link position-relative" href="/de">
+                                            <img class="sub-flags__flex-box__link__img" src="/img/header/lang/de.webp"
+                                                alt="jumpex">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+
                         </li>
+
                     </ul>
                 </nav>
             </div>
         </div>
+
     </header>
 
     <main>
