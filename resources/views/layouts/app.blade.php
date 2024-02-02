@@ -82,7 +82,16 @@
                         <li class="menu__list__li">
                             <a class="menu__item">
                                 <span class="flag-arrow">
+                                    @php
+                                    $currentLanguage = isset($currentLanguage) ? $currentLanguage : 'hu';
+                                    @endphp
+                                    @if ($currentLanguage == 'en')
+                                    <img class="flag-arrow__img" src="/img/header/lang/en.webp" alt="jumpex">
+                                    @elseif ($currentLanguage == 'hu')
                                     <img class="flag-arrow__img" src="/img/header/lang/hu.webp" alt="jumpex">
+                                    @elseif ($currentLanguage == 'de')
+                                    <img class="flag-arrow__img" src="/img/header/lang/de.webp" alt="jumpex">
+                                    @endif
                                 </span>
                             </a>
 
