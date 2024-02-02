@@ -9,7 +9,11 @@ class LanguagesController extends Controller
     public function home($lang = 'hu')
     {
         app()->setLocale($lang);
-        return view('welcome');
+        $currentLanguage = app()->getLocale();
+        $data = [
+            'currentLanguage' => $currentLanguage
+        ];
+        return view('welcome', $data);
     }
 
     public function about($lang = 'hu')
