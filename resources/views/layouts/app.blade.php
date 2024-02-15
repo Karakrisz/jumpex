@@ -50,10 +50,21 @@
 <body class="antialiased">
 
     <header class="header">
+        @php
+        $currentLanguage = isset($currentLanguage) ? $currentLanguage : 'hu';
+        @endphp
         <div class="header-content d-flex">
             <div class="logo-box  header-content__logo-box">
-                <a href="{{ url()->current() }}" class="header-content__logo-box__link text-transform-uppercase">Jumpex
+                @if ($currentLanguage == 'hu')
+                <a href="/hu" class="header-content__logo-box__link text-transform-uppercase">Jumpex
                     kft</a>
+                @elseif ($currentLanguage == 'en')
+                <a href="/en" class="header-content__logo-box__link text-transform-uppercase">Jumpex
+                    kft</a>
+                @elseif ($currentLanguage == 'de')
+                <a href="/de" class="header-content__logo-box__link text-transform-uppercase">Jumpex
+                    kft</a>
+                @endif
             </div>
             <div class="nav-box header-content__nav-box">
                 <div class="hamburger position-relative" id="hamburger">
@@ -71,7 +82,8 @@
                             <a class="menu__item" href="#">Referenciák</a>
                         </li>
                         <li class="menu__list__li">
-                            <a class="menu__item" href="#">Partnereink</a>
+                            <a class="menu__item"
+                                href="{{ route('partnerek', ['lang' => app()->getLocale()]) }}">{{ trans('messages.partnerek') }}</a>
                         </li>
                         <li class="menu__list__li">
                             <a class="menu__item" href="#">Ajánlatkérés</a>
@@ -82,15 +94,13 @@
                         <li class="menu__list__li">
                             <a class="menu__item">
                                 <span class="flag-arrow">
-                                    @php
-                                    $currentLanguage = isset($currentLanguage) ? $currentLanguage : 'hu';
-                                    @endphp
                                     @if ($currentLanguage == 'en')
-                                    <img class="flag-arrow__img" src="/img/header/lang/en.webp" alt="jumpex">
+                                    <img class="flag-arrow__img" src="{{ asset(__('messages.lang_image')) }}">
                                     @elseif ($currentLanguage == 'hu')
-                                    <img class="flag-arrow__img" src="/img/header/lang/hu.webp" alt="jumpex">
+                                    <img class="flag-arrow__img" src="{{ asset(__('messages.lang_image')) }}"
+                                        alt="jumpex">
                                     @elseif ($currentLanguage == 'de')
-                                    <img class="flag-arrow__img" src="/img/header/lang/de.webp" alt="jumpex">
+                                    <img class="flag-arrow__img" src="{{ asset(__('messages.lang_image')) }}">
                                     @endif
                                 </span>
                             </a>
@@ -98,18 +108,24 @@
                             <div class="flag-container position-relative">
                                 <div class="sub-flags position-absolute">
                                     <div class="sub-flags__flex-box d-flex">
+                                        @if ($currentLanguage == 'en' || $currentLanguage == 'de')
                                         <a class="sub-flags__flex-box__link position-relative" href="/hu">
                                             <img class="sub-flags__flex-box__link__img" src="/img/header/lang/hu.webp"
                                                 alt="jumpex">
                                         </a>
+                                        @endif
+                                        @if ($currentLanguage == 'hu' || $currentLanguage == 'de')
                                         <a class="sub-flags__flex-box__link position-relative" href="/en">
                                             <img class="sub-flags__flex-box__link__img" src="/img/header/lang/en.webp"
                                                 alt="jumpex">
                                         </a>
+                                        @endif
+                                        @if ($currentLanguage == 'hu' || $currentLanguage == 'en')
                                         <a class="sub-flags__flex-box__link position-relative" href="/de">
                                             <img class="sub-flags__flex-box__link__img" src="/img/header/lang/de.webp"
                                                 alt="jumpex">
                                         </a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

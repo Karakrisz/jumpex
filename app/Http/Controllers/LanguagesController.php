@@ -19,11 +19,26 @@ class LanguagesController extends Controller
     public function about($lang = 'hu')
     {
         app()->setLocale($lang);
+        $currentLanguage = app()->getLocale();
         $data = [
             'title' => trans('messages.rolunk'),
+            'currentLanguage' => $currentLanguage,
             'content' => ''
         ];
 
         return view('about.rolunk', $data);
+    }
+
+    public function partners($lang = 'hu')
+    {
+        app()->setLocale($lang);
+        $currentLanguage = app()->getLocale();
+        $data = [
+            'title' => trans('messages.partnerek'),
+            'currentLanguage' => $currentLanguage,
+            'content' => ''
+        ];
+
+        return view('partners.partnerek', $data);
     }
 }
