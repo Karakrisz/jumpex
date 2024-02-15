@@ -29,6 +29,19 @@ class LanguagesController extends Controller
         return view('about.rolunk', $data);
     }
 
+    public function references($lang = 'hu')
+    {
+        app()->setLocale($lang);
+        $currentLanguage = app()->getLocale();
+        $data = [
+            'title' => trans('messages.partnerek'),
+            'currentLanguage' => $currentLanguage,
+            'content' => ''
+        ];
+
+        return view('references.referenciak', $data);
+    }
+
     public function partners($lang = 'hu')
     {
         app()->setLocale($lang);
@@ -41,4 +54,18 @@ class LanguagesController extends Controller
 
         return view('partners.partnerek', $data);
     }
+
+    public function requestforproposal($lang = 'hu')
+    {
+        app()->setLocale($lang);
+        $currentLanguage = app()->getLocale();
+        $data = [
+            'title' => trans('messages.partnerek'),
+            'currentLanguage' => $currentLanguage,
+            'content' => ''
+        ];
+
+        return view('requestforproposal.ajanlatkeres', $data);
+    }
+
 }

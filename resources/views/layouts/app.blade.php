@@ -79,18 +79,18 @@
                                 href="{{ route('rolunk', ['lang' => app()->getLocale()]) }}">{{ trans('messages.rolunk') }}</a>
                         </li>
                         <li class="menu__list__li">
-                            <a class="menu__item" href="#">Referenciák</a>
+                            <a class="menu__item"
+                                href="{{ route('referenciak', ['lang' => app()->getLocale()]) }}">{{ trans('messages.referenciak') }}</a>
                         </li>
                         <li class="menu__list__li">
                             <a class="menu__item"
                                 href="{{ route('partnerek', ['lang' => app()->getLocale()]) }}">{{ trans('messages.partnerek') }}</a>
                         </li>
                         <li class="menu__list__li">
-                            <a class="menu__item" href="#">Ajánlatkérés</a>
+                            <a class="menu__item"
+                                href="{{ route('ajanlatkeres', ['lang' => app()->getLocale()]) }}">{{ trans('messages.ajanlatkeres') }}</a>
                         </li>
-                        <li class="menu__list__li">
-                            <a class="menu__item" href="#">Kapcsolat</a>
-                        </li>
+
                         <li class="menu__list__li">
                             <a class="menu__item">
                                 <span class="flag-arrow">
@@ -220,9 +220,8 @@
                     <a class="copyright-menu-link-box__link" href="#">Rólunk</a>
                     <a class="copyright-menu-link-box__link" href="#">Referenciák</a>
                     <a class="copyright-menu-link-box__link" href="#">Partnereink</a>
-                    <a class="copyright-menu-link-box__link" href="#">Ajánlatkérés</a>
                     <a class="copyright-menu-link-box__link copyright-menu-link-box__link--margin-0"
-                        href="#">Kapcsolat</a>
+                        href="#">Ajánlatkérés</a>
                 </div>
 
             </div>

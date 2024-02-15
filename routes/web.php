@@ -37,7 +37,9 @@ Route::get('/header', 'HeaderFooterController@getHeaderContent');
 
 Route::get('/{lang?}', [LanguagesController::class, 'home'])->where('lang', 'en|hu|de');
 Route::get('/{lang?}/rolunk', [LanguagesController::class, 'about'])->where('lang', 'en|hu|de')->name('rolunk');
+Route::get('/{lang?}/referenciak', [LanguagesController::class, 'references'])->where('lang', 'en|hu|de')->name('referenciak');
 Route::get('/{lang?}/partnerek', [LanguagesController::class, 'partners'])->where('lang', 'en|hu|de')->name('partnerek');
+Route::get('/{lang?}/ajanlatkeres', [LanguagesController::class, 'requestforproposal'])->where('lang', 'en|hu|de')->name('ajanlatkeres');
 
 Route::get('/', [PostController::class, 'index']);
 Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
