@@ -30,7 +30,7 @@
     </div>
 </section>
 
-<section>
+<section id="about">
     <div class="about-content position-relative">
 
         <img class="about-content__img position-absolute" src="/img/about/about-bg.webp" alt="jumpex">
@@ -82,7 +82,7 @@
     </div>
 </section>
 
-<section class="splide position-relative">
+<section class="splide position-relative" id="references">
     <div class="splide__up-box position-absolute"></div>
     <div class="splide__up-box__tBox text-center position-absolute">
         <h4 class="splide__up-box__tBox__h4">Referenciák</h4>
@@ -109,7 +109,7 @@
 </section>
 
 
-<section>
+<section id="partners">
     <div class="partners-content">
         <h5 class="partners-content__h5 text-center">Partnereink</h5>
         <div class="partners-content__iBox">

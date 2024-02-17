@@ -165,6 +165,44 @@ matrixTextAnimation.animateLetters();
 
 // ********************  Matrix end **********************
 
+/********************  Smooth scroll start **********************/
+
+function smoothScrollTo(targetId, duration) {
+
+    const target = document.querySelector(targetId);
+
+    if (!target) return;
+
+    const targetPosition = target.getBoundingClientRect().top + window.window.scrollY;
+    const startPosition = window.window.scrollY;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = timeElapsed / duration;
+        window.scrollTo(0, startPosition + distance * progress);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    requestAnimationFrame(animation);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.scroll').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            smoothScrollTo(targetId, 1000);
+        });
+    });
+});
+
+
+/********************  Smooth scroll end **********************/
+
+
 /********************  Slide start **********************/
 
 const splide = new Splide('.splide', {

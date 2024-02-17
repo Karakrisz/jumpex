@@ -75,20 +75,18 @@
                 <nav class="menu">
                     <ul class="menu__list d-flex" id="menu__list">
                         <li class="menu__list__li">
-                            <a class="menu__item"
-                                href="{{ route('rolunk', ['lang' => app()->getLocale()]) }}">{{ trans('messages.rolunk') }}</a>
+                            <!-- <a class="menu__item"
+                                href="{{ route('rolunk', ['lang' => app()->getLocale()]) }}">{{ trans('messages.rolunk') }}</a> -->
+                            <a class="menu__item scroll" href="#about">{{ trans('messages.rolunk') }}</a>
                         </li>
                         <li class="menu__list__li">
-                            <a class="menu__item"
-                                href="{{ route('referenciak', ['lang' => app()->getLocale()]) }}">{{ trans('messages.referenciak') }}</a>
+                            <a class="menu__item scroll" href="#references">{{ trans('messages.referenciak') }}</a>
                         </li>
                         <li class="menu__list__li">
-                            <a class="menu__item"
-                                href="{{ route('partnerek', ['lang' => app()->getLocale()]) }}">{{ trans('messages.partnerek') }}</a>
+                            <a class="menu__item scroll" href="#partners">{{ trans('messages.partnerek') }}</a>
                         </li>
                         <li class="menu__list__li">
-                            <a class="menu__item"
-                                href="{{ route('ajanlatkeres', ['lang' => app()->getLocale()]) }}">{{ trans('messages.ajanlatkeres') }}</a>
+                            <a class="menu__item scroll" href="#RFP"> {{ trans('messages.ajanlatkeres') }}</a>
                         </li>
 
                         <li class="menu__list__li">
@@ -145,7 +143,7 @@
 
     <footer>
 
-        <div class="footer-content">
+        <div class="footer-content" id="RFP">
 
             <div class="footer-content__iBox">
                 <img class="footer-content__iBox__img position-relative" src="/img/footer/footer-body.webp"
@@ -217,11 +215,11 @@
                 </div>
 
                 <div class="copyright-menu-link-box d-flex">
-                    <a class="copyright-menu-link-box__link" href="#">Rólunk</a>
-                    <a class="copyright-menu-link-box__link" href="#">Referenciák</a>
-                    <a class="copyright-menu-link-box__link" href="#">Partnereink</a>
-                    <a class="copyright-menu-link-box__link copyright-menu-link-box__link--margin-0"
-                        href="#">Ajánlatkérés</a>
+                    <a class="copyright-menu-link-box__link scroll" href="#about">Rólunk</a>
+                    <a class="copyright-menu-link-box__link scroll" href="#references">Referenciák</a>
+                    <a class="copyright-menu-link-box__link scroll" href="#partners">Partnereink</a>
+                    <a class="copyright-menu-link-box__link scroll copyright-menu-link-box__link--margin-0"
+                        href="#RFP">Ajánlatkérés</a>
                 </div>
 
             </div>
