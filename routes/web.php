@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PartnersController;
 use App\Http\Controllers\LanguagesController;
+use App\Http\Controllers\ContactFormController;
 
 
 /*
@@ -40,6 +41,9 @@ Route::get('/{lang?}/rolunk', [LanguagesController::class, 'about'])->where('lan
 Route::get('/{lang?}/referenciak', [LanguagesController::class, 'references'])->where('lang', 'en|hu|de')->name('referenciak');
 Route::get('/{lang?}/partnerek', [LanguagesController::class, 'partners'])->where('lang', 'en|hu|de')->name('partnerek');
 Route::get('/{lang?}/ajanlatkeres', [LanguagesController::class, 'requestforproposal'])->where('lang', 'en|hu|de')->name('ajanlatkeres');
+
+Route::get('/contact', [ContactFormController::class, 'create'])->name('contact.create');
+Route::post('/contact', [ContactFormController::class, 'store'])->name('contact.store');
 
 Route::get('/', [PostController::class, 'index']);
 Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');

@@ -154,7 +154,8 @@
 
                 <h6 class="footer-content__tBox__h6">Kérjen árajánlatot</h6>
 
-                <form class="footer-content__tBox__form d-flex" action="#" method="post">
+                <form class="footer-content__tBox__form d-flex" action="{{ route('contact.store') }}" method="post">
+                    @csrf
                     <label class="footer-content__tBox__form__label" for="company">Cég név:</label>
                     <input class="footer-content__tBox__form__input" type="text" id="company" name="company" required>
 
