@@ -202,6 +202,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /********************  Smooth scroll end **********************/
 
+/********************  Mail send start **********************/
+
+class ContactFormHandler {
+    constructor(formSelector) {
+        this.form = document.querySelector(formSelector);
+        this.submitButton = this.form.querySelector('button[type="submit"]');
+        this.initEventListeners();
+    }
+
+    initEventListeners() {
+        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(this.form);
+
+        fetch(this.form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': formData.get('_token')
+                }
+            })
+            .then(response => {
+                if (response.ok && response.headers.get('Content-Type').includes('application/json')) {
+                    return response.json();
+                } else {
+                    throw new Error('A szerver nem JSON választ küldött.');
+                }
+            })
+            .then(data => this.handleResponse(data))
+            .catch(error => this.displayErrorMessage(error.toString()));
+    }
+
+    handleResponse(data) {
+        if (data.success) {
+            this.displaySuccessMessage('Üzenet sikeresen elküldve.');
+            this.submitButton.style.display = 'none';
+        } else {
+            this.displayErrorMessage('Hiba történt az üzenet küldése közben.');
+        }
+    }
+
+    displaySuccessMessage(message) {
+        const successCard = document.createElement('div');
+        successCard.classList.add('form__success-box');
+        successCard.innerHTML = `<p>${message}</p>`;
+        this.form.appendChild(successCard);
+    }
+
+
+    displayErrorMessage(message) {
+        alert(message);
+    }
+}
+
+const contactForm = new ContactFormHandler('#contactForm');
 
 /********************  Slide start **********************/
 

@@ -6,6 +6,13 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.form__success-box {
+    background: #150135;
+    width: max-content;
+    color: #fff;
+    padding: 0.1em 2em;
+}
+
 
 /********************   Animation formating start **********************/
 
@@ -1570,6 +1577,8 @@ path {
     }
     .footer-content__tBox__form {
         height: 23em;
+        position: relative;
+        z-index: 100;
     }
     .copyright-content__link-box__p__link,
     .copyright-menu-link-box__link {
@@ -1585,7 +1594,7 @@ path {
     }
     .copyright-content__bg-img {
         object-fit: cover;
-        height: 40em;
+        height: 37em;
     }
     .copyright-content__link-box {
         bottom: 0;
