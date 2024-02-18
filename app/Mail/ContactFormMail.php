@@ -13,16 +13,36 @@ class ContactFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $data; 
+
     /**
      * Create a new message instance.
      *
+     * @param  array  $data  Az űrlap adatai
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data; 
     }
 
+      /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this->subject('Új Kapcsolatfelvételi Üzenet - Jumpex')
+                    ->markdown('emails.contact.form')
+                    ->with([
+                        'data' => $this->data,
+                        'url' => 'https://www.jumpex.hu',
+                        'color' => 'primary', 
+                    ]);
+    }
+    
+    
     /**
      * Get the message envelope.
      *
@@ -31,7 +51,7 @@ class ContactFormMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Contact Form Mail',
+            subject: 'Új Kapcsolatfelvételi Űrlap Üzenet',
         );
     }
 
@@ -44,6 +64,9 @@ class ContactFormMail extends Mailable
     {
         return new Content(
             markdown: 'emails.contact.form',
+            with: [
+                'data' => $this->data, 
+            ],
         );
     }
 

@@ -1,12 +1,17 @@
-<x-mail::message>
-# Introduction
+@component('mail::message')
+# Új Kapcsolatfelvételi Üzenet
 
-The body of your message.
+Kaptál egy új üzenetet a kapcsolatfelvételi űrlapodon keresztül. Itt vannak a részletek:
 
-<x-mail::button :url="''">
-Button Text
-</x-mail::button>
+- **Cég**: {{ $data['company'] }}
+- **Név**: {{ $data['name'] }}
+- **E-mail**: {{ $data['email'] }}
+- **Telefonszám**: {{ $data['phone'] }}
 
-Thanks,<br>
-{{ config('app.name') }}
-</x-mail::message>
+@component('mail::button', ['url' => $url])
+Megtekintés
+@endcomponent
+
+Köszönjük,
+Digital Seed
+@endcomponent
