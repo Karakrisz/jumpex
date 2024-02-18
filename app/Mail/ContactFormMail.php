@@ -41,8 +41,6 @@ class ContactFormMail extends Mailable
                         'color' => 'primary', 
                     ]);
     }
-    
-    
     /**
      * Get the message envelope.
      *

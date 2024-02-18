@@ -9,7 +9,7 @@ Kaptál egy új üzenetet a kapcsolatfelvételi űrlapodon keresztül. Itt vanna
 - **Telefonszám**: {{ $data['phone'] }}
 
 @component('mail::button', ['url' => $url])
-Megtekintés
+Oldal megtekintése
 @endcomponent
 
 Köszönjük,
