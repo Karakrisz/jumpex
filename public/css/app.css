@@ -128,6 +128,7 @@ ul {
 .about-body__iBox__img,
 .partners-content__iBox__img,
 .partners-content__link-box,
+.blog-content__cBox,
 .footer-content__iBox__img,
 .footer-content__tBox__form__btn-box {
     opacity: 0;
@@ -575,7 +576,8 @@ path {
 }
 
 .blog-content__cBox__tPanel {
-    padding: 1.7em;
+    padding: 1.7em 1.7em 1.2em 1.7em;
+    margin-top: -0.2em;
 }
 
 .blog-content__cBox__tPanel__h5,
@@ -590,6 +592,11 @@ path {
 
 .blog-content__cBox__tPanel__p {
     font-size: .9rem;
+}
+
+.blog-content__cBox__tPanel__lBox {
+    text-align: right;
+    margin-top: 1em;
 }
 
 
@@ -654,7 +661,7 @@ path {
 
 .footer-content__iBox__img {
     width: 80%;
-    margin-top: -2em;
+    margin-top: -1em;
     z-index: 100;
 }
 

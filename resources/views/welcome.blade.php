@@ -136,43 +136,24 @@
 
 <section>
     <div class="blog-content">
-
+        @foreach($posts as $post)
         <div class="blog-content__cBox">
-            <img class="blog-content__cBox__img" src="/img/blog/blog.jpg" alt="jumpex">
+            <img class="blog-content__cBox__img" src="{{ Voyager::image($post->image) }}" alt="{{ $post->title }}">
             <div class="blog-content__cBox__tPanel">
-                <h5 class="blog-content__cBox__tPanel__h5">LOREM IPSUM DOLOR SIT AMET</h5>
-                <p class="blog-content__cBox__tPanel__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    erat massa,
-                    fringilla id gravida non, gravida in eros. Praesent hendrerit risus id justo lobortis, sed iaculis
-                    orci
-                    congue.</p>
+                <h5 class="blog-content__cBox__tPanel__h5 text-transform-uppercase">{{ $post->title }}</h5>
+                <p class="blog-content__cBox__tPanel__p">
+                    {!! \Illuminate\Support\Str::limit(strip_tags(htmlspecialchars_decode($post->body)), 100)
+                    !!}</p>
+                <div class="blog-content__cBox__tPanel__lBox">
+                    <a class="blog-content__cBox__tPanel__lBox__link"
+                        href="{{ route('post.show', ['post' => $post]) }}">
+                        <img class="blog-content__cBox__tPanel__lBox__link__img" src="/img/intro/intro-arrow.svg"
+                            alt="jumpex">
+                    </a>
+                </div>
             </div>
         </div>
-
-        <div class="blog-content__cBox">
-            <img class="blog-content__cBox__img" src="/img/blog/blog.jpg" alt="jumpex">
-            <div class="blog-content__cBox__tPanel">
-                <h5 class="blog-content__cBox__tPanel__h5">LOREM IPSUM DOLOR SIT AMET</h5>
-                <p class="blog-content__cBox__tPanel__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    erat massa,
-                    fringilla id gravida non, gravida in eros. Praesent hendrerit risus id justo lobortis, sed iaculis
-                    orci
-                    congue.</p>
-            </div>
-        </div>
-
-        <div class="blog-content__cBox">
-            <img class="blog-content__cBox__img" src="/img/blog/blog.jpg" alt="jumpex">
-            <div class="blog-content__cBox__tPanel">
-                <h5 class="blog-content__cBox__tPanel__h5">LOREM IPSUM DOLOR SIT AMET</h5>
-                <p class="blog-content__cBox__tPanel__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    erat massa,
-                    fringilla id gravida non, gravida in eros. Praesent hendrerit risus id justo lobortis, sed iaculis
-                    orci
-                    congue.</p>
-            </div>
-        </div>
-
+        @endforeach
     </div>
 </section>
 

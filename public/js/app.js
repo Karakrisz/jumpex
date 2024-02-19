@@ -107,6 +107,7 @@ const introContentImgboxImg = document.querySelectorAll('.intro-content__img-box
 const aboutBodyiBoxImg = document.querySelectorAll('.about-body__iBox__img');
 const partnersContentiBoximg = document.querySelectorAll('.partners-content__iBox__img');
 const partnersContentLinkbox = document.querySelectorAll('.partners-content__link-box');
+const blogContentCBox = document.querySelectorAll('.blog-content__cBox');
 const footerContentiBoximg = document.querySelectorAll('.footer-content__iBox__img');
 const footerContenttBoxFormBtnBox = document.querySelectorAll('.footer-content__tBox__form__btn-box');
 
@@ -127,6 +128,10 @@ partnersContentiBoximg.forEach(element => {
 });
 
 partnersContentLinkbox.forEach(element => {
+    new ScrollBottomAnimation(element);
+});
+
+blogContentCBox.forEach(element => {
     new ScrollBottomAnimation(element);
 });
 
