@@ -33,7 +33,7 @@ class ContactFormMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Új Kapcsolatfelvételi Üzenet - Jumpex')
+        return $this->subject('Új Kapcsolatfelvételi Üzenet')
                     ->markdown('emails.contact.form')
                     ->with([
                         'data' => $this->data,

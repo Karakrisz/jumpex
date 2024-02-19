@@ -15,7 +15,7 @@ class ContactFormController extends Controller
 
     public function store(Request $request)
     {
-        // Űrlapadatok validálása
+    
         $data = $request->validate([
             'company' => 'required',
             'name' => 'required',

@@ -149,6 +149,7 @@ ul {
 .intro-content,
 .about-body,
 .partners-content__iBox,
+.blog-content,
 .footer-content {
     display: grid;
 }
@@ -397,8 +398,12 @@ ul {
     width: 100%;
 }
 
-.about-header {
+.about-header,
+.blog-content {
     grid-template-columns: repeat(3, 1fr);
+}
+
+.about-header {
     justify-items: center;
     padding-top: 2.5em;
 }
@@ -425,6 +430,7 @@ ul {
 
 .about-body,
 .partners-content,
+.blog-content,
 .footer-content {
     padding: 2em 5em;
 }
@@ -547,6 +553,47 @@ path {
 
 
 /********************   partners formating end **********************/
+
+
+/********************   blog formating start **********************/
+
+.blog-content {
+    background-color: #150035;
+}
+
+.blog-content__cBox {
+    margin: 0.7em;
+}
+
+.blog-content__cBox__img {
+    width: 100%;
+    height: 13em;
+}
+
+.blog-content__cBox__tPanel {
+    background: #fff;
+}
+
+.blog-content__cBox__tPanel {
+    padding: 1.7em;
+}
+
+.blog-content__cBox__tPanel__h5,
+.blog-content__cBox__tPanel__p {
+    margin: 0;
+}
+
+.blog-content__cBox__tPanel__h5 {
+    font-size: 1rem;
+    margin-bottom: 0.8em;
+}
+
+.blog-content__cBox__tPanel__p {
+    font-size: .9rem;
+}
+
+
+/********************   blog formating end **********************/
 
 
 /********************   footer formating start **********************/
@@ -1580,6 +1627,7 @@ path {
         position: relative;
         z-index: 100;
     }
+    .footer-content__tBox__form__btn-box__btn__span,
     .copyright-content__link-box__p__link,
     .copyright-menu-link-box__link {
         font-size: .9rem;

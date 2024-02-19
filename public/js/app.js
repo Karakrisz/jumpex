@@ -240,10 +240,10 @@ class ContactFormHandler {
 
     handleResponse(data) {
         if (data.success) {
-            this.displaySuccessMessage('Üzenet sikeresen elküldve.');
+            this.displaySuccessMessage(data.message);
             this.submitButton.style.display = 'none';
         } else {
-            this.displayErrorMessage('Hiba történt az üzenet küldése közben.');
+            this.displayErrorMessage(data.message || 'Hiba történt az üzenet küldése közben.');
         }
     }
 

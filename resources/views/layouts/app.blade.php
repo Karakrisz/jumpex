@@ -152,26 +152,30 @@
 
             <div class="footer-content__tBox">
 
-                <h6 class="footer-content__tBox__h6">Kérjen árajánlatot</h6>
+                <h6 class="footer-content__tBox__h6">{{ __('messages.footer_content_tBox_h6') }}</h6>
 
                 <form class="footer-content__tBox__form d-flex" id="contactForm" action="{{ route('contact.store') }}"
                     method="post">
                     @csrf
-                    <label class="footer-content__tBox__form__label" for="company">Cég név:</label>
+                    <label class="footer-content__tBox__form__label"
+                        for="company">{{ __('messages.label_name') }}:</label>
                     <input class="footer-content__tBox__form__input" type="text" id="company" name="company" required>
 
-                    <label class="footer-content__tBox__form__label" for="name">Név:</label>
+                    <label class="footer-content__tBox__form__label"
+                        for="name">{{ __('messages.label_name_two') }}:</label>
                     <input class="footer-content__tBox__form__input" type="text" id="name" name="name" required>
 
-                    <label class="footer-content__tBox__form__label" for="email">E-mail:</label>
+                    <label class="footer-content__tBox__form__label"
+                        for="email">{{ __('messages.label_email') }}:</label>
                     <input class="footer-content__tBox__form__input" type="email" id="email" name="email" required>
 
-                    <label class="footer-content__tBox__form__label" for="phone">Telefonszám:</label>
+                    <label class="footer-content__tBox__form__label" for="phone">{{ __('messages.label_tel') }}:</label>
                     <input class="footer-content__tBox__form__input" type="tel" id="phone" name="phone" required>
 
                     <div class="footer-content__tBox__form__btn-box position-relative">
                         <button class="footer-content__tBox__form__btn-box__btn page-link" type="submit">
-                            <span class="footer-content__tBox__form__btn-box__btn__span">Elküldés<img
+                            <span
+                                class="footer-content__tBox__form__btn-box__btn__span">{{ __('messages.from_button') }}<img
                                     class="footer-content__tBox__form__btn-box__btn__span__img position-relative"
                                     src="/img/footer/mail-btn.svg" alt="jumpex">
                             </span>
@@ -213,15 +217,17 @@
                 </p>
 
                 <div class="copyright-logo-box">
-                    <a class="copyright-logo-box__link text-transform-uppercase" href="/">jumpex kft</a>
+                    <a class="copyright-logo-box__link text-transform-uppercase">jumpex kft</a>
                 </div>
 
                 <div class="copyright-menu-link-box d-flex">
-                    <a class="copyright-menu-link-box__link scroll" href="#about">Rólunk</a>
-                    <a class="copyright-menu-link-box__link scroll" href="#references">Referenciák</a>
-                    <a class="copyright-menu-link-box__link scroll" href="#partners">Partnereink</a>
+                    <a class="copyright-menu-link-box__link scroll" href="#about">{{ trans('messages.rolunk') }}</a>
+                    <a class="copyright-menu-link-box__link scroll"
+                        href="#references">{{ trans('messages.referenciak') }}</a>
+                    <a class="copyright-menu-link-box__link scroll"
+                        href="#partners">{{ trans('messages.partnerek') }}</a>
                     <a class="copyright-menu-link-box__link scroll copyright-menu-link-box__link--margin-0"
-                        href="#RFP">Ajánlatkérés</a>
+                        href="#RFP">{{ trans('messages.ajanlatkeres') }}</a>
                 </div>
 
             </div>
