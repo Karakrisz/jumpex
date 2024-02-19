@@ -21,22 +21,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <!-- favicons Icons -->
-    <link rel="icon" href="/img/header/logo.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/header/logo.png">
+    <link rel="icon" href="/img/content.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/content.png">
     <!-- <link rel="manifest" href="assets/images/favicons/site.webmanifest" /> -->
     <meta name="description" content="Jumpex Kft" />
     <!-- SEO -->
     <meta property="og:title" content="Jumpex Kft" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="/img/content.jpg" />
     <meta property="og:site_name" content="Jumpex Kft" />
-    <meta property="og:description" content="" />
+    <meta property="og:description"
+        content="Fedezd fel azokat az alapvető stratégiákat, amelyekkel hatékonyan építhetők a liftek 2024-ben, beleértve az innovatív technológiákat, biztonsági protokollokat, és a fenntartható gyakorlatokat, amelyek projektjeid sikerét emelik." />
 
     <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
     <meta name="DC.coverage" content="Hungary" />
-    <meta name="DC.description" content="" />
+    <meta name="DC.description"
+        content="Fedezd fel azokat az alapvető stratégiákat, amelyekkel hatékonyan építhetők a liftek 2024-ben, beleértve az innovatív technológiákat, biztonsági protokollokat, és a fenntartható gyakorlatokat, amelyek projektjeid sikerét emelik." />
     <meta name="DC.format" content="text/html" />
     <meta name="DC.publisher" content="Jumpex Kft" />
-    <meta name="DC.title" content="" />
+    <meta name="DC.title"
+        content="Fedezd fel azokat az alapvető stratégiákat, amelyekkel hatékonyan építhetők a liftek" />
 
     <!-- Slide css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">

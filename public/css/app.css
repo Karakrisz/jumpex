@@ -1504,11 +1504,13 @@ path {
     .d-flex {
         flex-wrap: wrap;
     }
+    .header {
+        padding: 2em 2em 8em 2em;
+    }
     .header-content__logo-box,
     .header-content__nav-box {
         width: 100%;
     }
-    .header,
     .intro-content,
     .about-body,
     .partners-content,
@@ -1555,6 +1557,7 @@ path {
         padding: 0.5rem;
         margin: 2em 0 1em 0;
         width: max-content;
+        position: fixed;
     }
     .header.active .bar:nth-child(2) {
         opacity: 0;
