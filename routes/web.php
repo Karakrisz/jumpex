@@ -1,13 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\PartnersController;
-use App\Http\Controllers\LanguagesController;
 use App\Http\Controllers\ContactFormController;
-
+use App\Http\Controllers\LanguagesController;
+use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +17,6 @@ use App\Http\Controllers\ContactFormController;
 |
  */
 
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -28,7 +24,6 @@ Route::get('/', function () {
 // Route::get('/{lang?}', function ($lang = 'hu') {
 //     return view('welcome');
 // })->where('lang', 'en|hu|de');
-
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -46,7 +41,7 @@ Route::get('/contact', [ContactFormController::class, 'create'])->name('contact.
 Route::post('/contact', [ContactFormController::class, 'store'])->name('contact.store');
 
 Route::get('/', [PostController::class, 'index']);
-Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
+Route::get('/{lang?}/post/{post}', [PostController::class, 'show'])->where('lang', 'en|hu|de')->name('post.show');
 Route::get('/json-posts', [PostController::class, 'jsonPosts']);
 Route::get('/categories', [CategoryController::class, 'index']);
 

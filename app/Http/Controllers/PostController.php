@@ -18,9 +18,12 @@ class PostController extends Controller
         return view('welcome', compact('posts'));
     }
 
-    public function show(Post $post)
+    public function show($lang = 'hu', Post $post)
     {
-        return view('posts.show', compact('post'));
+        app()->setLocale($lang);
+        $currentLanguage = app()->getLocale();
+    
+        return view('posts.show', compact('post', 'currentLanguage'));
     }
 
     public function jsonPosts()

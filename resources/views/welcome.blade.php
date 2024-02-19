@@ -142,11 +142,12 @@
             <div class="blog-content__cBox__tPanel">
                 <h5 class="blog-content__cBox__tPanel__h5 text-transform-uppercase">{{ $post->title }}</h5>
                 <p class="blog-content__cBox__tPanel__p">
-                    {!! \Illuminate\Support\Str::limit(strip_tags(htmlspecialchars_decode($post->body)), 100)
-                    !!}</p>
+                    {{ \Illuminate\Support\Str::limit(html_entity_decode(strip_tags($post->body)), 100) }}
+                </p>
+
                 <div class="blog-content__cBox__tPanel__lBox">
                     <a class="blog-content__cBox__tPanel__lBox__link"
-                        href="{{ route('post.show', ['post' => $post]) }}">
+                        href="{{ route('post.show', ['lang' => app()->getLocale(), 'post' => $post->id]) }}">
                         <img class="blog-content__cBox__tPanel__lBox__link__img" src="/img/intro/intro-arrow.svg"
                             alt="jumpex">
                     </a>

@@ -432,7 +432,8 @@ ul {
 .about-body,
 .partners-content,
 .blog-content,
-.footer-content {
+.footer-content,
+.blog-custom-content {
     padding: 2em 5em;
 }
 
@@ -592,11 +593,21 @@ path {
 
 .blog-content__cBox__tPanel__p {
     font-size: .9rem;
+    width: 85%;
 }
 
 .blog-content__cBox__tPanel__lBox {
     text-align: right;
     margin-top: 1em;
+}
+
+.blog-custom-content__img {
+    width: 100%;
+    height: 100%;
+}
+
+.blog-custom-content__link-box {
+    margin: 3em 0 1.5em 0;
 }
 
 
@@ -1410,6 +1421,7 @@ path {
     .intro-content,
     .about-header,
     .about-body,
+    .blog-content,
     .footer-content {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
@@ -1500,7 +1512,9 @@ path {
     .intro-content,
     .about-body,
     .partners-content,
-    .footer-content {
+    .footer-content,
+    .blog-content,
+    .blog-custom-content {
         padding: 2em 2em;
     }
     .menu__list.hidden {
@@ -1558,6 +1572,7 @@ path {
     .about-header,
     .about-body,
     .partners-content__iBox,
+    .blog-content,
     .footer-content {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }

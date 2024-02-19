@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use TCG\Voyager\Models\Post;
 
 class LanguagesController extends Controller
 {
@@ -10,8 +11,11 @@ class LanguagesController extends Controller
     {
         app()->setLocale($lang);
         $currentLanguage = app()->getLocale();
+
+        $posts = Post::with('category')->latest()->take(3)->get();
         $data = [
-            'currentLanguage' => $currentLanguage
+            'currentLanguage' => $currentLanguage,
+            'posts' => $posts,
         ];
         return view('welcome', $data);
     }
@@ -23,7 +27,7 @@ class LanguagesController extends Controller
         $data = [
             'title' => trans('messages.rolunk'),
             'currentLanguage' => $currentLanguage,
-            'content' => ''
+            'content' => '',
         ];
 
         return view('about.rolunk', $data);
@@ -36,7 +40,7 @@ class LanguagesController extends Controller
         $data = [
             'title' => trans('messages.partnerek'),
             'currentLanguage' => $currentLanguage,
-            'content' => ''
+            'content' => '',
         ];
 
         return view('references.referenciak', $data);
@@ -49,7 +53,7 @@ class LanguagesController extends Controller
         $data = [
             'title' => trans('messages.partnerek'),
             'currentLanguage' => $currentLanguage,
-            'content' => ''
+            'content' => '',
         ];
 
         return view('partners.partnerek', $data);
@@ -62,7 +66,7 @@ class LanguagesController extends Controller
         $data = [
             'title' => trans('messages.partnerek'),
             'currentLanguage' => $currentLanguage,
-            'content' => ''
+            'content' => '',
         ];
 
         return view('requestforproposal.ajanlatkeres', $data);
